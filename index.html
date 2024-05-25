@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css"/>
-    <link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/twentytwenty.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/jquery.event.move.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/jquery.twentytwenty.js"></script>
+    <style>
+		#test {
+			width: 50%; /* Adjust width as needed */
+			margin: 0 auto; /* Centering horizontally */
+			position: relative; /* Required for Twenty Twenty to position the images correctly */
+		}
+
+		img {
+			width: 100%;
+			display: block; /* Removes bottom space/gap */
+		}
+    </style>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" 
+	integrity="sha512-NJy06C7fPArp8I0XLO5pDDTDguBMLCPQ2FyjU3xrwuD5CGyN6CbfTr40Zv+YON7lDNzAsRqZeEY8Oi0xrgP+3w==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/foundation.min.css" 
+	integrity="sha512-FiuJrymBAjwc33PPG6AqRpCw+lIoBy+3hdFRE7uSSYaLH4ZxTQ1r+YSaLf9HB6abBl3o6mfk4iqRhnyaT0zlLw==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script  src="https://code.jquery.com/jquery-3.7.1.min.js"
+	  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js" 
+	integrity="sha512-GPLeok4pmABjbz8dF6i4cqao9fhF9LE5X4rI0ORBe2YqbZmaqdSiM7g4oO+CEy99SxZV6memnoKANwopFr6Z6g==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js" 
+	integrity="sha512-LbipuILGe2LAzpjWmMA+B++LsvW1nAL5IQXvpmidOmJmei0p/odo6ewzxX8YHGc51DGIwcUDa6LxQxOEf7G1EA==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <div id="before_after">
-      <img src="https://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2013/11/21/1385070209257/May-1919-A-motorcycle-mac-001.jpg">
-      <img src="https://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2013/11/21/1385070171300/The-corner-of-Fargate-and-001.jpg">
+
+<div id="test">
+		<div class="twentytwenty-container">
+		  <img src="https://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2013/11/21/1385070209257/May-1919-A-motorcycle-mac-001.jpg">
+		  <img src="https://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2013/11/21/1385070171300/The-corner-of-Fargate-and-001.jpg">
+		<div>
     </div>
-    
     <script>
         $(window).on("load", function() {
-            $("#before_after").twentytwenty();
+            $(".twentytwenty-container").twentytwenty();
         });
     </script>
 </body>
